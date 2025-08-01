@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coffee-masters</title>
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
    <nav class="main-nav">
@@ -11,14 +16,14 @@
             <img
                 src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
                 alt="coffee masters logo"
-                class="logo-asset"
+                class="logo"
             />
             Coffee Masters
         </h1>
    </nav> 
 
    <div class="checkout-details">
-    <section class="items-section">
+    <section class="items-section box">
         <h2 class="card-title">ITEMS</h2>
         <ul class="order-breakdown">
             <li class="item">
@@ -48,8 +53,44 @@
             </li>
         </ul>
     </section>
-    <section>
-        <h2 class="card-title">NAME</h2>
+    <section class="payment-section">
+        <div class="customer-name-box box">
+            <h2 class="card-title">NAME</h2>
+            <div class="input-group">
+                <label class="user-input-label" for="name">Your name</label>
+                <input class="customer-input" type="text" id="name"/>
+            </div>
+        </div>
+        <div class="payment-method-box box">
+            <h2 class="card-title">PAYMENT METHOD</h2>
+            <div class="input-group">
+                <label class="user-input-label" for="card-number">Card number</label>
+                <input type="text" class="card-number-input" id="cc" />
+            </div>
+            <div class="input-group">
+                <label class="user-input-label" for="ccv">CCV number</label>
+                <input type="text" class="user-input" id="ccv" />
+            </div>
+        </div>
+    </section>
+    <section class="cost-breakdown">
+        <table class="totals-table">
+            <tbody>
+                <tr>
+                    <td>Subtotal:</td>
+                    <td>N$132.00</td>
+                </tr>
+                <tr>
+                    <td>Tax:</td>
+                    <td>N$15.00</td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td>N$147.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="checkout-button" type="button">Place order</button>
     </section>
    </div>
 </body>
